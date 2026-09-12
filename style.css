@@ -50,7 +50,7 @@
     background-size: cover;
     background-position: center 50%;
 }
-/* fotoni xiralashtiruvchi oq qatlam (tepasi tozaroq, pastda foto ko'rinadi) */
+/* fotoni xiralashtiruvchi oq qatlam */
 .whyChoose::before {
     content: "";
     position: absolute;
@@ -73,7 +73,7 @@
     opacity: 0.25;
     pointer-events: none;
 }
-/* seven section — xira rider foni */
+/* seven section — xira foni */
 .partnerCta {
     position: relative;
     overflow: hidden;
@@ -81,11 +81,33 @@
     background-size: cover;
     background-position: center;
 }
-/* fotoni xiralashtiruvchi oq qatlam */
+/* fotoni xiralashtiruvchi */
 .partnerCta::before {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(245, 245, 245, 0.9);
     pointer-events: none;
+}
+
+/* ul animatsiya */
+.liBorder li {
+    position: relative;
+}
+
+.liBorder li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background: #ffaa00;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+.liBorder li:hover::after,
+.liBorder li:focus-within::after {
+    transform: scaleX(1);
 }
